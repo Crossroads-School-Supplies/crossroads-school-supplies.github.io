@@ -194,6 +194,6 @@ q('.head,.idx li,.grid .tile,.steps li,.visit .wrap>*,.end .wrap>*').forEach((e,
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});q('.rv').forEach(e=>io.observe(e));
 q('.idx li').forEach(li=>li.addEventListener('mousemove',e=>{const r=li.getBoundingClientRect();li.style.setProperty('--x',(e.clientX-r.left+36)+'px');li.style.setProperty('--y',(e.clientY-r.top-r.height/2)*.5+'px')}));
 const bg=q('.hero .bg')[0];if(!rm)addEventListener('scroll',()=>{bg.style.setProperty('--py',Math.min(scrollY,900)*.22+'px')},{passive:true});
-})();
+})(); 
 </script>
 </body></html>
